@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/js_empleados.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>EMPLEADOS</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                  <img src="img/intecap.png" class="px-5 py-4" width="350px"  alt="Logo de Intecap">
+              </div>
+              <div class="col">
+               
+              </div>
+              <div class="col py-5 text-center">
+                <a href="#">
+                    <img src="img/facebook.png" width="70px"  alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="img/twitter.png" width="100px" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="img/instagram.png" width="100px"  alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="img/youtube.png" width="100px"  alt="Youtube">
+                </a>
+                <a href="#">
+                    <img src="img/linkedin.png" width="70px"  alt="Linkedin">
+                </a>
+              </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="container-fluid">
+                
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse text-center" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav text-uppercase text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empleados.html">EMPLEADOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sueldo_liquido.html">SUELDO LÍQUIDO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indemnizacion.html">INDEMNIZACIÓN</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <main class="container-fluid">
+            <div class="row">
+              <section class="col-3 text-star">
+                <form class="py-5 border border-light action="">
+                    <h1>EMPLEADO</h1>
+                    <div class="py-2">
+                        <label class="pb-3" for="">NOMBRE</label>
+                        <input type="text" class="form-control mb-3 rounded-pill" placeholder="Ingresar nombre">
+                    </div>
+                    <div class="py-2">
+                        <label class="pb-3" for="">FECHA DE INGRESO</label>
+                        <input type="date" class="form-control mb-3 rounded-pill" placeholder="Ingresar fecha ">
+                    </div>
+                    <div class="py-2">
+                        <label class="pb-3" for="">PUESTO</label>
+                        <input type="text" class="form-control mb-3 rounded-pill" placeholder="Ingresar puesto">
+                    </div>
+                    <div class="py-2">
+                        <label class="pb-3" for="">SALARIO</label>
+                        <input type="number" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario">
+                    </div>
+
+                    <div>
+                        <input type="submit" class="form-control mb-3 rounded-pill">
+                    </div>
+                </form>
+                <aside class="py-5 text-center">
+                    <img src="img/intecap-50.png" width="250px" class="img-fluid" alt="">
+                </aside>
+              </section>
+              <section class="col-sm-9 row py-5 px-5" id="lista-empleados">
+                <div>
+                    <h1>LISTA DE EMPLEADOS</h1>
+                    <input type="submit" class=" mb-3 rounded-pill">
+                    <input type="submit" class=" mb-3 rounded-pill">
+
+                    <div>
+                        <table class="table table-dark table-hover table-bordered border-light">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+              </section>
+              
+            </div>
+          </main>
+
+    </div>
+</body>
+</html>
