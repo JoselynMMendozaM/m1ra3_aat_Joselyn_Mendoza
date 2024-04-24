@@ -28,5 +28,13 @@ form{
 }
 tr{
     height: 50px;
+    background-color: #7d92d6;
+
+}
+#enca-tb{
+    background-color: #2241a7;
+}
+table{
+    color: white;
 }
 

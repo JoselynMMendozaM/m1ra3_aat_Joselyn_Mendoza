@@ -1,18 +1,27 @@
-document.getElementById('btn-enviar').addEventListener('click', function() {
-    // Obtener los valores ingresados por el usuario
-    var id = document.getElementById('id-empleado').value;
-    var nombre = document.getElementById('nombre-empleado').value;
-    var apellido = document.getElementById('apellido-empleado').value;
 
-    // Crear una nueva fila con los datos ingresados
-    var nuevaFila = '<tr><td>' + id + '</td><td>' + nombre + '</td><td>' + apellido + '</td></tr>';
+$(document).ready(function() {
 
-    // Agregar la nueva fila al cuerpo de la tabla
-    var tabla = document.getElementById('tabla-empleados').getElementsByTagName('tbody')[0];
-    tabla.innerHTML += nuevaFila;
+    
+    $("#btn-save").click(function() {
+        var name = $('#name').val();
+        var date = parseFloat($('#date').val());
+        var puesto =  $('#puesto').val();
+        var salario = parseFloat($('#salario').val());
 
-    // Limpiar los campos de entrada después de agregar la fila
-    document.getElementById('id-empleado').value = '';
-    document.getElementById('nombre-empleado').value = '';
-    document.getElementById('apellido-empleado').value = '';
+    
+        $('#tabla_datos tbody').append(`<tr><td>${name}</td><td>${date}</td><td>${puesto}</td><td>${salario}</td></tr>`) ;
+        
+    
+
+    });
+  
+    // Eliminar Primera Fila
+    $("#btn_eliminar_primera_fila").click(function() {
+      $("#tabla_datos tbody tr:firt-child").remove();
+    });
+
+    // Eliminar última Fila
+    $("#btn_eliminar_primera_fila").click(function() {
+        $("#tabla_datos tbody tr:last-child").remove();
+      });
 });

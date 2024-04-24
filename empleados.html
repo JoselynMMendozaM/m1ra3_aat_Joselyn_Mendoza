@@ -64,91 +64,102 @@
             </nav>
         <main class="container-fluid">
             <div class="row">
-              <section class="col-4 text-star">
-                <form class="py-5 border border-light action="">
+              <section class="col-md-5 col-12 text-star">
+                <form class="py-5 px-4 border border-light action="">
                     <h1>EMPLEADO</h1>
                     <div class="py-2">
                         <label class="pb-3" for="">NOMBRE</label>
-                        <input type="text" class="form-control mb-3 rounded-pill" placeholder="Ingresar nombre">
-                    </div>
+                        <input type="text" id="name" class="form-control mb-3 rounded-pill" placeholder="Ingresar nombre">
+                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+
+                      </div>
                     <div class="py-2">
                         <label class="pb-3" for="">FECHA DE INGRESO</label>
-                        <input type="date" class="form-control mb-3 rounded-pill" placeholder="Ingresar fecha ">
-                    </div>
+                        <input type="date" id="date" class="form-control mb-3 rounded-pill" placeholder="Ingresar fecha ">
+                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+
+                      </div>
                     <div class="py-2">
                         <label class="pb-3" for="">PUESTO</label>
-                        <input type="text" class="form-control mb-3 rounded-pill" placeholder="Ingresar puesto">
-                    </div>
+                        <input type="text" id="puesto" class="form-control mb-3 rounded-pill" placeholder="Ingresar puesto">
+                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+
+                      </div>
                     <div class="py-2">
                         <label class="pb-3" for="">SALARIO</label>
-                        <input type="number" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario">
-                    </div>
+                        <input type="number" id="salario" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario">
+                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>                    
+                      </div>
 
                     <div>
-                        <input type="submit" class="form-control mb-3 rounded-pill">
+                        <input type="submit" id="btn-save" class="btn btn-primary form-control mb-3 rounded-pill shadow-lg rounded" value="GUARDAR">
                     </div>
                 </form>
-                <aside class="py-5 text-center">
-                    <img src="img/intecap-50.png" width="250px" class="img-fluid" alt="">
-                </aside>
               </section>
-              <section class="col-sm-7 row py-5 px-5" id="lista-empleados">
+              <section class="col-md-6 row py-5 px-5" id="lista-empleados">
                 <div>
-                    <div class="container-fluid">
+                    <div class="container-fluid pb-5">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-md-12 col-lg-5 pb-3">
                                 <h2>LISTA DE EMPLEADOS</h2>
                             </div>
-                            <div class="col">
-                                <input type="submit" class="mb-3 rounded-pill">
+                            <div class="col-md-8 col col-lg-5 pb-3">
+                                <input type="submit" id="btn_eliminar_primera_fila" value="Eliminar Primero" class="btn btn-primary shadow-lg rounded mb-3 rounded-pill">
                             </div>
-                            <div class="col">
-                                <input type="submit" class="mb-3 rounded-pill">
+                            <div class="col-md-3 col col-lg-2 pb-3">
+                                <input type="submit" id="btn_eliminar_ultima_fila" value="Eliminar Último" class="btn btn-primary shadow-lg rounded mb-3 rounded-pill">
                             </div>
                         </div>
                     </div>
                     
 
                     <div>
-                        <table class="table table-info table-hover table-striped table-bordered border-dark">
+                        <table id="tabla_datos" class="table  table-hover table-striped table-bordered border-dark shadow-lg rounded">
                             <thead>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                <tr id="enca-tb" class="text-uppercase text-white">
+                                    <td>Nombre</td>
+                                    <td>Fecha de Ingreso</td>
+                                    <td>Puesto</td>
+                                    <td>Salario</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Christofer Chan</td>
+                                    <td>06/02/2024</td>
+                                    <td>Gerente</td>
+                                    <td>15,000</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Jackson Wang</td>
+                                    <td>24/02/2024</td>
+                                    <td>instructor</td>
+                                    <td>5,000</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Mark Tuan</td>
+                                    <td>15/02/2024</td>
+                                    <td>Contador</td>
+                                    <td>10,000</td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Christian Yu</td>
+                                    <td>08/02/2024</td>
+                                    <td>Instructor</td>
+                                    <td>5,000</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
               </section>
               
+            </div>
+            <div class="row">
+              <section class="">
+                <aside class="py-5 px-5 col-md-5 col-12 text-center">
+                  <img src="img/intecap-50.png" width="250px" class="img-fluid" alt="">
+              </aside>
+              </section>
             </div>
           </main>
 
