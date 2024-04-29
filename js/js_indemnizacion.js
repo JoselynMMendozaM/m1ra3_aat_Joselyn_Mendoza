@@ -2,10 +2,11 @@ $(document).ready(function() {
     $('#calc_indemnizacion').click(function(event) {
         event.preventDefault(); 
 
-        var sueldoBase = parseFloat($('#sueldo_base').val());
-        var cantAños = parseFloat($('#cant_años').val());
-        var salarioPendiente = parseFloat($('#salario_pendiente').val());
-        var deudasCobros = parseFloat($('#deudas_cobros').val());
+        let sueldoBase = parseFloat($('#sueldo_base').val());
+        let cantAños = parseFloat($('#cant_años').val());
+        let cantMeses = parseFloat($('#cant_meses').val());
+        let salarioPendiente = parseFloat($('#salario_pendiente').val());
+        let deudasCobros = parseFloat($('#deudas_cobros').val());
 
         if (isNaN(sueldoBase) || sueldoBase <= 0) {
             $('#error1').show();
@@ -18,20 +19,25 @@ $(document).ready(function() {
         } else {
             $('#error2').hide();
         }
-    
-        if (isNaN(salarioPendiente) || salarioPendiente < 0) {
+
+        if (isNaN(cantMeses) || cantMeses < 0) {
             $('#error3').show();
         } else {
             $('#error3').hide();
         }
     
-        if (isNaN(deudasCobros) || deudasCobros < 0) {
+        if (isNaN(salarioPendiente) || salarioPendiente < 0) {
             $('#error4').show();
         } else {
             $('#error4').hide();
         }
-
-        var cantMeses = (cantAños * 12);
+    
+        if (isNaN(deudasCobros) || deudasCobros < 0) {
+            $('#error5').show();
+        } else {
+            $('#error5').hide();
+        }
+        
         var aguinaldo = (sueldoBase / 12) * cantMeses;
         var bonoCatorce = (sueldoBase / 12)  * cantMeses;
 
