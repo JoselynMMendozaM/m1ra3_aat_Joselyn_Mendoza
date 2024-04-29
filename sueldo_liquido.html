@@ -72,19 +72,19 @@
                     <div class="py-2">
                         <label class="pb-3" for="">SALARIO</label>
                         <input type="number" id="salario" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <span id="error1" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
   
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">BONIFICACIÓN</label>
                         <input type="number" id="bonificacion" class="form-control mb-3 rounded-pill" placeholder="Ingresar bonificación ">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <span id="error2" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
   
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">COMISIONES</label>
                         <input type="number" id="comisiones" class="form-control mb-3 rounded-pill" placeholder="Ingresar comisiones">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <span id="error3" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
   
                       </div>
   
@@ -101,24 +101,24 @@
                     <div class="py-2">
                         <label class="pb-3" for="">AHORRO</label>
                         <input type="number" id="ahorro" class="form-control mb-3 rounded-pill" placeholder="Ingresar ahorro">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <span id="error4" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
   
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">IGSS</label>
-                        <input type="number" id="igss" class="form-control mb-3 rounded-pill" placeholder="Ingresar IGSS ">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <div id="resultado_igss" class="py-4 text-center">
+                        </div>
   
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">PRESTAMOS/OTROS DESCUENTOS</label>
                         <input type="number" id="prestamos-descuentos" class="form-control mb-3 rounded-pill" placeholder="Ingresar PRESTAMOS/OTROS DESCUENTOS">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <span id="error5" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
   
                       </div>
   
                     <div class="pt-3">
-                        <input type="submit" id="btn-descuentos" class="btn btn-primary form-control mb-3 rounded-pill shadow-lg rounded" value="TOTAL DE DESCUENTOS">
+                      <input type="submit" id="calc_descuentos" class="btn btn-primary form-control mb-3 rounded-pill shadow-lg rounded" value="TOTAL DE DESCUENTOS">
                     </div>
                     <div id="resultado_descuentos" class="py-4">
                     </div>
@@ -134,7 +134,7 @@
                     <div>
                       <input type="submit" id="sueldo_liquido" class="btn btn-primary form-control mb-3 rounded-pill shadow-lg rounded" value="OBTENER SUELDO LÍQUIDO">
                   </div>
-                  <div id="resultado_sueldo_liquido" class="py-4">
+                  <div id="resultado_sueldo_liquido" class="py-4 text-center">
                   </div>
                   </div>
                 </div>

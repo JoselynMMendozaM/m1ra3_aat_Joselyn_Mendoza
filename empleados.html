@@ -69,26 +69,26 @@
                     <h1>EMPLEADO</h1>
                     <div class="py-2">
                         <label class="pb-3" for="">NOMBRE</label>
-                        <input type="text" id="name" class="form-control mb-3 rounded-pill" placeholder="Ingresar nombre">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <input type="text" id="name" class="form-control mb-3 rounded-pill" placeholder="Ingresar nombre" required>
+                        <span id="error1" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
 
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">FECHA DE INGRESO</label>
-                        <input type="date" id="date" class="form-control mb-3 rounded-pill" placeholder="Ingresar fecha ">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <input type="date" id="date" class="form-control mb-3 rounded-pill" placeholder="Ingresar fecha " required>
+                        <span id="error2" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
 
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">PUESTO</label>
-                        <input type="text" id="puesto" class="form-control mb-3 rounded-pill" placeholder="Ingresar puesto">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
+                        <input type="text" id="puesto" class="form-control mb-3 rounded-pill" placeholder="Ingresar puesto" required>
+                        <span id="error3" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>
 
                       </div>
                     <div class="py-2">
                         <label class="pb-3" for="">SALARIO</label>
-                        <input type="number" id="salario" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario">
-                        <span id="nameError" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>                    
+                        <input type="number" id="salario" class="form-control mb-3 rounded-pill" placeholder="Ingresar salario" required>
+                        <span id="error4" style="display: none; color: rgba(255, 0, 64, 0.63);"><strong>Completa este campo</strong></span>                    
                       </div>
 
                     <div>
@@ -157,7 +157,7 @@
             <div class="row">
               <section class="">
                 <aside class="py-5 px-5 col-md-5 col-12 text-center">
-                  <img src="img/intecap-50.png" width="250px" class="img-fluid" alt="">
+                  <img id="logo_int_50" src="img/intecap-50.png" width="250px" class="img-fluid" alt="">
               </aside>
               </section>
             </div>
