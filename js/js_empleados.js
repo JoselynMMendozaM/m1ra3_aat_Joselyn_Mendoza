@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#btn-save").click(function(event) {
       event.preventDefault(); 
       let name = $('#name').val();
-      let date = parseFloat($('#date').val());
+      let date = $('#date').val(); // Cambiado a cadena para conservar la fecha completa
       let puesto = $('#puesto').val();
       let salario = parseFloat($('#salario').val());
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $('#error1').show();
       }
 
-      if (isNaN(date)) {
+      if (date === '') {
         $('#error2').show();
       }
 
@@ -27,12 +27,12 @@ $(document).ready(function() {
         $('#error1').hide();
     });
 
-    // Acción al escribir en el campo "BONIFICACIÓN"
+    // Acción al escribir en el campo "FECHA"
     $('#date').change(function() {
         $('#error2').hide();
     });
 
-    // Acción al escribir en el campo "COMISIONES"
+    // Acción al escribir en el campo "PUESTO"
     $('#puesto').change(function() {
         $('#error3').hide();
     });
@@ -43,11 +43,9 @@ $(document).ready(function() {
 
       if ($('#error1').is(':visible') || $('#error2').is(':visible') || $('#error3').is(':visible') || $('#error4').is(':visible')) {
         return;
-      }else{
+      } else {
         $('#tabla_datos tbody').append(`<tr><td>${name}</td><td>${date}</td><td>${puesto}</td><td>${salario}</td></tr>`);
-
       }
-
 
       $('#name').val('');
       $('#date').val('');
@@ -55,6 +53,8 @@ $(document).ready(function() {
       $('#salario').val('');
 
   });
+
+
 
   $("#btn_eliminar_primera_fila").click(function() {
       $("#tabla_datos tbody tr:first-child").remove();
