@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#btn-save").click(function(event) {
       event.preventDefault(); 
       let name = $('#name').val();
-      let date = $('#date').val(); // Cambiado a cadena para conservar la fecha completa
+      let date = $('#date').val(); 
       let puesto = $('#puesto').val();
       let salario = parseFloat($('#salario').val());
 
@@ -27,12 +27,12 @@ $(document).ready(function() {
         $('#error1').hide();
     });
 
-    // Acción al escribir en el campo "FECHA"
+    
     $('#date').change(function() {
         $('#error2').hide();
     });
 
-    // Acción al escribir en el campo "PUESTO"
+    
     $('#puesto').change(function() {
         $('#error3').hide();
     });
