@@ -1,14 +1,11 @@
 $(document).ready(function() {
- 
     $('#total_ganado').click(function(event) {
-        event.preventDefault(); // Evita que el formulario se envíe
+        event.preventDefault(); 
 
-        // Obtener los valores de los inputs
         var salario = $('#salario').val();
         var bonificacion = $('#bonificacion').val();
         var comisiones = $('#comisiones').val();
 
-        // Validar que los campos no estén vacíos
         if (salario.trim() === '' || bonificacion.trim() === '' || comisiones.trim() === '') {
             $('#error1').toggle(salario.trim() === '');
             $('#error2').toggle(bonificacion.trim() === '');
@@ -20,7 +17,6 @@ $(document).ready(function() {
         $('#resultado_igss').html(`<h4><strong>${igss.toFixed(2)}</strong></h4>`);
 
 
-        // Calcular el total ganado y mostrarlo
         var totalGanado = parseFloat(salario) + parseFloat(bonificacion) + parseFloat(comisiones);
         $('#resultado_ganado').html(`<h4><strong>El total ganado es de: Q${totalGanado.toFixed(2)}</strong></h4>`);
 
@@ -38,25 +34,25 @@ $(document).ready(function() {
         $('#error3').hide();
     });
 
+    
     $('#calc_descuentos').click(function(event) {
-        event.preventDefault(); // Evita el envío del formulario
-
+        event.preventDefault(); 
+          
         var ahorro = parseFloat($('#ahorro').val().trim());
         var igss = parseFloat($('#resultado_igss').text().trim());
         var prestamosDescuentos = parseFloat($('#prestamos-descuentos').val().trim());
-
+          
         if (isNaN(ahorro) || ahorro <= 0 || isNaN(prestamosDescuentos) || prestamosDescuentos <= 0) {
             mostrarErrores(ahorro, prestamosDescuentos);
             return;
         }
-
+          
         limpiarErrores();
           
         var totalDescuentos = ahorro + igss + prestamosDescuentos;
-
         $('#resultado_descuentos').html(`<h4><strong>El total de descuentos es de: Q${totalDescuentos.toFixed(2)}</strong></h4>`);
     });
-
+    
     function mostrarErrores(ahorro, prestamosDescuentos) {
         if (isNaN(ahorro) || ahorro <= 0) {
             $('#error4').show();
@@ -70,12 +66,12 @@ $(document).ready(function() {
             $('#error5').hide();
         }
     }
-
+          
     function limpiarErrores() {
         $('#error4').hide();
         $('#error5').hide();
     }
-
+          
     $('#ahorro').change(function() {
         $('#error4').hide();
     });
@@ -84,9 +80,10 @@ $(document).ready(function() {
         $('#error5').hide();
     });
     
+      
     $('#sueldo_liquido').click(function(event) {
-        event.preventDefault(); // Evita que el formulario se envíe
-
+        event.preventDefault(); 
+    
         var totalGanadoText = $('#resultado_ganado').text();
         var totalDescuentosText = $('#resultado_descuentos').text();
     
@@ -100,7 +97,7 @@ $(document).ready(function() {
     
         var totalGanado = parseFloat(totalGanadoMatch[0]);
         var totalDescuentos = parseFloat(totalDescuentosMatch[0]);
-  
+    
         var sueldoLiquido = totalGanado - totalDescuentos;
         $('#resultado_sueldo_liquido').html(`<h4><strong>El sueldo líquido es de: Q${sueldoLiquido.toFixed(2)}</strong></h4>`);
     });
