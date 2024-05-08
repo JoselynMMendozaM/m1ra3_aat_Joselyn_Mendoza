@@ -10,4 +10,5 @@
 
 ### Descripción del proyecto
 >El proyecto cuenta con 4 paginas: Inicio, empleado, sueldo base e indemnizacion.
+
 >Las tecnologias utilizadas fueron. HTML, CSS(BOOTSTRAP) Y JavaScript
